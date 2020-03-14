@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   & span {
     font-size: 10rem;
     margin: 10px 40px;
-    font-family: "Intervogue";
+    font-family: "Roboto";
     font-weight: 200;
     font-style: italic;
     color: ${COLOR.PRIMARY};

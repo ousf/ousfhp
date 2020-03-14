@@ -4,8 +4,7 @@ import styled from "styled-components"
 import COLOR from "../../const/color"
 
 const Wrapper = styled.div`
-  width: 80%;
-  margin: 10px;
+  margin: 10px 0;
 `
 
 const Date = styled.div`

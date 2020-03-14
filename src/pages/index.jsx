@@ -6,7 +6,7 @@ import Kaishi from "../components/top/kaishi"
 import Ousf from "../components/top/ousf"
 import Welcome from "../components/top/welcome"
 
-const TopPage = () => {
+const TopPage = ({ data }) => {
   return (
     <div>
       <Welcome />
