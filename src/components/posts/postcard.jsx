@@ -40,7 +40,7 @@ const PostCard = props => {
   return (
     <Wrapper
       to={"/post/" + props.linkto}
-      whileHover={{ scale: 1.1 }}
+      whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >
       <Card barShow="false" titleShow="false" seemoreShow="false">

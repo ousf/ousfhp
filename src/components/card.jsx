@@ -5,6 +5,7 @@ import { Link } from "gatsby"
 import COLOR from "../const/color"
 
 import SeeMore from "./seemorebutton"
+import Button from "./button"
 
 const handleColorTypeBg = (theme, bgcolor) => {
   switch (theme) {
@@ -99,7 +100,7 @@ const Card = props => {
       {props.children}
       <SeeMoreWrapper style={{ display: props.seemoreShow ? "none" : "" }}>
         <LinkT to={props.linkto}>
-          <SeeMore />
+          <Button>SEE MORE</Button>
         </LinkT>
       </SeeMoreWrapper>
     </Wrapper>
