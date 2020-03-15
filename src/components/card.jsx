@@ -33,7 +33,8 @@ const Wrapper = styled.div`
   border-radius: 10px;
   background: ${props => handleColorTypeBg(props.theme, props.bgcolor)};
   box-shadow: 5px 5px 10px ${COLOR.SHADOW_B}, -5px -5px 10px ${COLOR.SHADOW_W};
-  width: 500px;
+  width: 90vw;
+  max-width: 900px;
   /* min-height: 100px; */
   margin: 40px 0px;
   display: flex;

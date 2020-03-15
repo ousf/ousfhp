@@ -1,15 +1,25 @@
 import React from "react"
 import styled from "styled-components"
 import { motion, AnimatePresence } from "framer-motion"
+import { generateMedia } from "styled-media-query"
+import Helmet from "react-helmet"
 
 import BackTypo from "../components/backtypography"
 
 import Nav from "../components/nav/nav"
 
+const customMedia = generateMedia({
+  mobile: "1000px",
+})
+
 const Contents = styled.div`
   z-index: 2;
   position: absolute;
-  left: calc(50vw - 250px);
+  ${customMedia.lessThan("mobile")`
+  left: 5vw;
+    `}
+  ${customMedia.greaterThan("mobile")`
+  left: calc(50vw - 450px);`}
 `
 
 const variants = {
@@ -38,6 +48,13 @@ const variants = {
 const Layout = props => {
   return (
     <div>
+      <Helmet
+        htmlAttributes={{
+          lang: "ja",
+        }}
+        title="ousfhp"
+        meta={[{ name: "robots", content: "noindex,nofollow" }]}
+      />
       <Nav />
       <AnimatePresence>
         <motion.main

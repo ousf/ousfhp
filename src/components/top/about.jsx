@@ -11,7 +11,7 @@ const Content = styled.div`
   box-sizing: border-box;
   width: 80%;
   font-size: 0.9rem;
-  line-height: 1.2rem;
+  line-height: 1.5rem;
 `
 
 const About = () => {
