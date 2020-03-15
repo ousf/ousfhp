@@ -4,6 +4,7 @@ import styled from "styled-components"
 
 import COLOR from "../const/color"
 
+import Layout from "../components/layout"
 import Card from "../components/card"
 
 const Date = styled.div`
@@ -41,7 +42,7 @@ const Content = styled.div`
   }
 `
 
-const BasicPostTemplate = ({ data }) => {
+const BasicPostTemplate = ({ data, location }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
   return (

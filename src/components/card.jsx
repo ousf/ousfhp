@@ -4,7 +4,6 @@ import { Link } from "gatsby"
 
 import COLOR from "../const/color"
 
-import SeeMore from "./seemorebutton"
 import Button from "./button"
 
 const handleColorTypeBg = (theme, bgcolor) => {

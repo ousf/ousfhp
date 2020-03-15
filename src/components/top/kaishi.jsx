@@ -45,7 +45,7 @@ const Description = styled.div`
   line-height: 1.2rem;
 `
 
-const Kaishi = () => {
+const Kaishi = ({ key }) => {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
@@ -78,7 +78,10 @@ const Kaishi = () => {
     <Card title="会誌紹介" linkto="/books">
       {books.map(({ node }) => {
         return (
-          <Content to={"/book/" + node.frontmatter.path}>
+          <Content
+            to={"/book/" + node.frontmatter.path}
+            key={node.frontmatter.path}
+          >
             <div css="width: 40%;">
               <BookImage
                 src={node.frontmatter.bookimg.childImageSharp.fluid.src}

@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { motion } from "framer-motion"
+//import { motion } from "framer-motion"
 
 import Card from "../card"
 import Badge from "../badge"
@@ -17,15 +17,6 @@ const Title = styled.div`
   line-height: 1.6rem;
   color: ${COLOR.BLACK};
   margin: 20px 0;
-  margin-right: auto;
-`
-
-const Date = styled.span`
-  font-family: "Roboto";
-  font-weight: 300;
-  font-size: 1rem;
-  color: ${COLOR.BLACK};
-  padding: 5px 0;
   margin-right: auto;
 `
 

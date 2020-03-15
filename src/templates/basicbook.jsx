@@ -4,6 +4,7 @@ import styled from "styled-components"
 
 import COLOR from "../const/color"
 
+import Layout from "../components/layout"
 import Card from "../components/card"
 import Badge from "../components/badge"
 import Button from "../components/button"
@@ -59,7 +60,7 @@ const BookName = styled.span`
   line-height: 2.5rem;
 `
 
-const BasicBookTemplate = ({ data }) => {
+const BasicBookTemplate = ({ data, location }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
   const mainImgSrc = frontmatter.bookimg.childImageSharp.fluid.src

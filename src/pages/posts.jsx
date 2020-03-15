@@ -1,12 +1,13 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
-import COLOR from "../const/color"
+//import COLOR from "../const/color"
 
+import Layout from "../components/layout"
 import Card from "../components/card"
 import PostCard from "../components/posts/postcard"
 
-const PostsPage = ({ data }) => {
+const PostsPage = ({ data, location }) => {
   const posts = data.allMarkdownRemark.edges
   return (
     <div>
@@ -18,6 +19,7 @@ const PostsPage = ({ data }) => {
             title={title}
             linkto={node.frontmatter.path}
             date={node.frontmatter.date}
+            key={node.id}
           />
         )
       })}
@@ -35,6 +37,7 @@ export const query = graphql`
     ) {
       edges {
         node {
+          id
           frontmatter {
             date(formatString: "YYYY.MM.DD")
             title

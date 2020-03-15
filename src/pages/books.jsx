@@ -1,12 +1,13 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import COLOR from "../const/color"
+//import COLOR from "../const/color"
 
+import Layout from "../components/layout"
 import Card from "../components/card"
 import BookCard from "../components/books/bookcard"
 
-const BooksPage = ({ data }) => {
+const BooksPage = ({ data, location }) => {
   const books = data.allMarkdownRemark.edges
   return (
     <div>
@@ -19,6 +20,7 @@ const BooksPage = ({ data }) => {
       {books.map(({ node }) => {
         return (
           <BookCard
+            key={node.id}
             title={node.frontmatter.title}
             linkto={node.frontmatter.path}
             bookimg={node.frontmatter.bookimg.childImageSharp.fluid.src}
@@ -41,6 +43,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
+          id
           frontmatter {
             title
             path

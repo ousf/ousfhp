@@ -23,6 +23,7 @@ const Notice = () => {
       ) {
         edges {
           node {
+            id
             frontmatter {
               date(formatString: "YYYY.MM.DD")
               title
@@ -39,6 +40,7 @@ const Notice = () => {
       {posts.map(({ node }) => {
         return (
           <Wrapper
+            key={node.id}
             to={"/post/" + node.frontmatter.path}
             whileHover={{ x: 10 }}
             whileTap={{ x: -5 }}

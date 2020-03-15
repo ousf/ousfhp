@@ -56,7 +56,7 @@ const Layout = props => {
         meta={[{ name: "robots", content: "noindex,nofollow" }]}
       />
       <Nav />
-      <AnimatePresence>
+      <AnimatePresence exitBeforeEnter>
         <motion.main
           key={props.location.pathname}
           variants={variants}

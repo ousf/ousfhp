@@ -3,6 +3,7 @@ import styled from "styled-components"
 
 import COLOR from "../const/color"
 
+import Layout from "../components/layout"
 import Card from "../components/card"
 
 const Content = styled.div`
@@ -33,7 +34,7 @@ const Content = styled.div`
     line-height: 1.5rem;
   }
 `
-const AboutPage = () => {
+const AboutPage = ({ location }) => {
   return (
     <div>
       <Card
