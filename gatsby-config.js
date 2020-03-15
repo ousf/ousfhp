@@ -5,6 +5,7 @@
  */
 
 module.exports = {
+  pathPrefix: "/ousfhp",
   plugins: [
     `gatsby-plugin-styled-components`,
     {
