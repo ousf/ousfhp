@@ -30,7 +30,7 @@ const Content = styled.div`
       background-color: ${COLOR.PRIMARY};
       position: absolute;
       left: 0;
-      top: 0.1rem;
+      top: 0.05rem;
     }
   }
   & p {

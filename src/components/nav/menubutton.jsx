@@ -1,8 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 import { motion } from "framer-motion"
+import mediaQuery from "styled-media-query"
 
 import COLOR from "../../const/color"
+
+const mediaMobile = mediaQuery.lessThan("medium")
 
 const Wrapper = styled(motion.span)`
   color: ${COLOR.PRIMARY};
@@ -11,6 +14,10 @@ const Wrapper = styled(motion.span)`
   font-weight: 100;
   margin: 30px;
   pointer-events: fill;
+  ${mediaMobile`
+    margin: 4vh;
+    font-size: 5vh;
+  `}
 `
 
 const variants = {

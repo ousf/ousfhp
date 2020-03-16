@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 import COLOR from "../const/color"
+import UI from "../const/ui"
 
 import Button from "./button"
 
@@ -31,7 +32,8 @@ const handleColorTypeText = (theme, textcolor) => {
 const Wrapper = styled.div`
   border-radius: 10px;
   background: ${props => handleColorTypeBg(props.theme, props.bgcolor)};
-  box-shadow: 5px 5px 10px ${COLOR.SHADOW_B}, -5px -5px 10px ${COLOR.SHADOW_W};
+  box-shadow: ${UI.SHADOW.Dark} ${COLOR.SHADOW_B},
+    ${UI.SHADOW.Light} ${COLOR.SHADOW_W};
   width: 90vw;
   max-width: 900px;
   /* min-height: 100px; */

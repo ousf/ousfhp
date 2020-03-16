@@ -19,6 +19,7 @@ const Title = styled.div`
   font-family: "Noto Sans JP";
   font-size: 1.2rem;
   color: ${COLOR.BLACK};
+  line-height: 1.4rem;
 `
 
 const Item = props => {

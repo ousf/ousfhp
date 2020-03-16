@@ -1,8 +1,8 @@
 export default {
-    BASE: "#F7F7F7",
+    BASE: "#edeef1",
     PRIMARY: "#21B7F8",
     BLACK: "#535353",
-    SHADOW_B: "#bcbcbc",
+    SHADOW_B: "#c9cacd",
     SHADOW_W: "#ffffff",
     BOOTH: "#fc4d50"
 }

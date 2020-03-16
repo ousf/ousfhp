@@ -22,11 +22,11 @@ const Content = styled.div`
     &::before {
       content: "";
       width: 5px;
-      height: 1.7rem;
+      height: 100%;
       background-color: ${COLOR.PRIMARY};
       position: absolute;
       left: 0;
-      top: -0.1rem;
+      top: 0.05rem;
     }
   }
   & p {

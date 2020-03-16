@@ -2,11 +2,14 @@ import React from "react"
 import styled from "styled-components"
 import { motion } from "framer-motion"
 import { Link } from "gatsby"
+import mediaQuery from "styled-media-query"
 
 import COLOR from "../../const/color"
 
 import MenuButton from "./menubutton"
 import Logo from "../ousf_logo"
+
+const mediaMobile = mediaQuery.lessThan("medium")
 
 const Wrapper = styled.div`
   z-index: 6;
@@ -21,6 +24,12 @@ const LogoWrapper = styled(motion.div)`
   width: 400px;
   margin: 40px;
   margin-bottom: 40px;
+  ${mediaMobile`
+    width: 90%;
+    margin-bottom: 4vh;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  `}
 `
 const Container = styled(motion.div)`
   display: flex;

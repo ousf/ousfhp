@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { motion } from "framer-motion"
 
 import COLOR from "../const/color"
+import UI from "../const/UI"
 
 const handleColorTypeText = (theme, textcolor) => {
   switch (theme) {
@@ -21,12 +22,14 @@ const Wrapper = styled(motion.div)`
   padding: 10px 20px;
   margin: 5px;
   background-color: ${COLOR.BASE};
-  box-shadow: 3px 3px 10px ${COLOR.SHADOW_B}, -5px -5px 10px ${COLOR.SHADOW_W};
+  box-shadow: ${UI.SHADOW.Dark} ${COLOR.SHADOW_B},
+    ${UI.SHADOW.Light} ${COLOR.SHADOW_W};
   border-radius: 10px;
   text-align: center;
   transition-duration: 150ms;
   &:hover {
-    box-shadow: 5px 5px 12px ${COLOR.SHADOW_B}, -8px -8px 12px ${COLOR.SHADOW_W};
+    box-shadow: ${UI.SHADOW.Dark} ${COLOR.SHADOW_B},
+      ${UI.SHADOW.Light} ${COLOR.SHADOW_W};
     transform: scale(1.05);
     transition-duration: 150ms;
   }

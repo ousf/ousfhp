@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { motion, AnimatePresence } from "framer-motion"
 import { generateMedia } from "styled-media-query"
 import Helmet from "react-helmet"
+import mediaQuery from "styled-media-query"
 
 import BackTypo from "../components/backtypography"
 
@@ -12,6 +13,8 @@ const customMedia = generateMedia({
   mobile: "1000px",
 })
 
+const mediaMobile = mediaQuery.lessThan("medium")
+
 const Contents = styled.div`
   z-index: 2;
   position: absolute;
@@ -20,6 +23,13 @@ const Contents = styled.div`
     `}
   ${customMedia.greaterThan("mobile")`
   left: calc(50vw - 450px);`}
+  ${props => {
+    if (props.location === "/") {
+      return mediaMobile`
+          top: 45vh;
+        `
+    }
+  }}
 `
 
 const variants = {
@@ -64,7 +74,9 @@ const Layout = props => {
           animate="enter"
           exit="exit"
         >
-          <Contents>{props.children}</Contents>
+          <Contents location={props.location.pathname}>
+            {props.children}
+          </Contents>
         </motion.main>
       </AnimatePresence>
       <BackTypo />

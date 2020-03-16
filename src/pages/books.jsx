@@ -3,9 +3,12 @@ import { graphql } from "gatsby"
 
 //import COLOR from "../const/color"
 
-import Layout from "../components/layout"
 import Card from "../components/card"
 import BookCard from "../components/books/bookcard"
+import BookCardMobile from "../components/books/bookcardmobile"
+import withMediaComponent from "../components/withMediaComponent"
+
+const Item = withMediaComponent(BookCard, BookCardMobile)
 
 const BooksPage = ({ data, location }) => {
   const books = data.allMarkdownRemark.edges
@@ -19,7 +22,7 @@ const BooksPage = ({ data, location }) => {
       ></Card>
       {books.map(({ node }) => {
         return (
-          <BookCard
+          <Item
             key={node.id}
             title={node.frontmatter.title}
             linkto={node.frontmatter.path}

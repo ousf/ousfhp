@@ -3,13 +3,15 @@ import styled from "styled-components"
 import { motion } from "framer-motion"
 
 import COLOR from "../../const/color"
+import UI from "../../const/UI"
 
 import Icon from "./navicon"
 
 const Wrapper = styled(motion.div)`
   width: 60px;
   height: 60px;
-  box-shadow: 5px 5px 10px ${COLOR.SHADOW_B}, -5px -5px 10px ${COLOR.SHADOW_W};
+  box-shadow: ${UI.SHADOW.Dark} ${COLOR.SHADOW_B},
+    ${UI.SHADOW.Light} ${COLOR.SHADOW_W};
   border-radius: 30px;
   background-color: ${COLOR.BASE};
   position: fixed;
