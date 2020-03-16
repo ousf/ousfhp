@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { motion } from "framer-motion"
 
 import COLOR from "../const/color"
-import UI from "../const/UI"
+import UI from "../const/ui"
 
 const handleColorTypeText = (theme, textcolor) => {
   switch (theme) {

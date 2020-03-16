@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import COLOR from "../const/color"
-import UI from "../const/UI"
+import UI from "../const/ui"
 
 const Wrapper = styled.div`
   width: 100px;
