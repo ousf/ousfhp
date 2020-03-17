@@ -21,15 +21,10 @@ const Wrapper = styled.div`
   padding: 20px;
 `
 const LogoWrapper = styled(motion.div)`
-  width: 400px;
   margin: 40px;
-  margin-bottom: 40px;
-  ${mediaMobile`
-    width: 90%;
-    max-width:400px;
-    margin-bottom: 4vh;
-    box-sizing: border-box;
-  `}
+  margin-bottom: 4vh;
+  box-sizing: border-box;
+  width: 40vh;
 `
 const Container = styled(motion.div)`
   display: flex;

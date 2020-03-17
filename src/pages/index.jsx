@@ -14,8 +14,8 @@ const TopPage = ({ data, location }) => {
   return (
     <div>
       <Welcome />
-      <Notice />
       <About />
+      <Notice />
       <BookItem />
       <Ousf />
     </div>

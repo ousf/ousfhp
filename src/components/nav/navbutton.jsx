@@ -16,7 +16,7 @@ const Wrapper = styled(motion.div)`
   background-color: ${COLOR.BASE};
   position: fixed;
   z-index: 6;
-  bottom: 30px;
+  bottom: 40px;
   left: 30px;
   overflow: hidden;
   color: ${COLOR.PRIMARY};
