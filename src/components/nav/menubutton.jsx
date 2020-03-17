@@ -5,7 +5,7 @@ import mediaQuery from "styled-media-query"
 
 import COLOR from "../../const/color"
 
-const mediaMobile = mediaQuery.lessThan("medium")
+const mediaMobile = mediaQuery.lessThan("large")
 
 const Wrapper = styled(motion.span)`
   color: ${COLOR.PRIMARY};

@@ -9,7 +9,7 @@ import COLOR from "../../const/color"
 import MenuButton from "./menubutton"
 import Logo from "../ousf_logo"
 
-const mediaMobile = mediaQuery.lessThan("medium")
+const mediaMobile = mediaQuery.lessThan("large")
 
 const Wrapper = styled.div`
   z-index: 6;
@@ -26,9 +26,9 @@ const LogoWrapper = styled(motion.div)`
   margin-bottom: 40px;
   ${mediaMobile`
     width: 90%;
+    max-width:400px;
     margin-bottom: 4vh;
     box-sizing: border-box;
-    margin-bottom: 20px;
   `}
 `
 const Container = styled(motion.div)`

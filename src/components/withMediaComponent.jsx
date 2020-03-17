@@ -18,7 +18,7 @@ const withMediaComponent = (DesktopComponent, MobileComponent) => {
         <MediaQuery query="(max-width: 768px)">
           <MobileComponent {...props} />
         </MediaQuery>
-        <MediaQuery query="(min-width: 768px)">
+        <MediaQuery query="(min-width: 769px)">
           <DesktopComponent {...props} />
         </MediaQuery>
       </div>

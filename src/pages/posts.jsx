@@ -11,7 +11,12 @@ const PostsPage = ({ data, location }) => {
   const posts = data.allMarkdownRemark.edges
   return (
     <div>
-      <Card title="投稿一覧" seemoreShow="False" theme="primary"></Card>
+      <Card
+        title="投稿一覧"
+        seemoreShow="False"
+        theme="primary"
+        barShow="False"
+      ></Card>
       {posts.map(({ node }) => {
         const title = node.frontmatter.title
         return (
