@@ -55,6 +55,11 @@ const variants = {
   },
 }
 
+const Spacer = styled.div`
+  width: 100%;
+  height: 50px;
+`
+
 const Layout = props => {
   return (
     <div>
@@ -76,6 +81,7 @@ const Layout = props => {
         >
           <Contents location={props.location.pathname}>
             {props.children}
+            <Spacer />
           </Contents>
         </motion.main>
       </AnimatePresence>

@@ -1,11 +1,21 @@
 import React from "react"
-//import styled from "styled-components"
+import styled from "styled-components"
 
 import Card from "../card"
+import COLOR from "../../const/color"
+
+const License = styled.span`
+  color: ${COLOR.BASE};
+  font-family: "Noto Sans JP";
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+`
 
 const Ousf = () => {
   return (
-    <Card title="大阪大学ＳＦ研究会" theme="reverse" seemoreShow="False"></Card>
+    <Card titleShow barShow theme="reverse" seemoreShow="False">
+      <License>© 2020 大阪大学ＳＦ研究会</License>
+    </Card>
   )
 }
 

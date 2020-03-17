@@ -77,27 +77,27 @@ const NavContents = props => {
 
         <MenuButton isOpen={props.isOpen}>
           <LinkT to="/" onClick={props.toggleOpen}>
-            TOP
+            トップ
           </LinkT>
         </MenuButton>
         <MenuButton isOpen={props.isOpen}>
           <LinkT to="/about" onClick={props.toggleOpen}>
-            ABOUT
+            阪大ＳＦ研とは
           </LinkT>
         </MenuButton>
         <MenuButton isOpen={props.isOpen}>
           <LinkT to="/posts" onClick={props.toggleOpen}>
-            POSTS
+            おしらせ
           </LinkT>
         </MenuButton>
         <MenuButton isOpen={props.isOpen}>
           <LinkT to="/books" onClick={props.toggleOpen}>
-            BOOKS
+            会誌紹介
           </LinkT>
         </MenuButton>
         <MenuButton isOpen={props.isOpen}>
           <LinkT to="/contact" onClick={props.toggleOpen}>
-            CONTACT
+            アクセス
           </LinkT>
         </MenuButton>
       </Container>

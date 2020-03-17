@@ -41,9 +41,10 @@ Wrapper.defaultProps = {
 const Content = styled.span`
   text-decoration: none;
   font-size: 0.9rem;
-  font-family: "Roboto";
+  font-family: "Roboto", "Noto Sans JP";
   color: ${props => handleColorTypeText(props.theme, props.textcolor)};
   font-weight: 300;
+  white-space: nowrap;
 `
 Content.defaultProps = {
   textcolor: COLOR.PRIMARY,

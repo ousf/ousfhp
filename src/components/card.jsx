@@ -84,6 +84,18 @@ const LinkT = styled(Link)`
   color: ${COLOR.PRIMARY};
 `
 
+const SubTitle = styled.span`
+  color: ${props => handleColorTypeText(props.theme, props.color)};
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: "Roboto, Noto Sans JP";
+  letter-spacing: 0.3rem;
+`
+
+SubTitle.defaultProps = {
+  color: COLOR.BLACK,
+}
+
 const Card = props => {
   return (
     <Wrapper bgcolor={props.bgcolor} theme={props.theme}>
@@ -94,6 +106,9 @@ const Card = props => {
       >
         {props.title}
       </Title>
+      <SubTitle style={{ display: props.subTitle ? "" : "none" }}>
+        - {props.subTitle} -
+      </SubTitle>
       <Bar
         style={{ display: props.barShow ? "none" : "" }}
         color={props.textcolor}

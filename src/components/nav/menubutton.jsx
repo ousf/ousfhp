@@ -14,8 +14,17 @@ const Wrapper = styled(motion.span)`
   font-weight: 100;
   margin: 30px;
   pointer-events: fill;
+  a {
+    font-family: "Noto Sans JP", "Roboto";
+    font-weight: 500;
+    font-size: 2rem;
+    letter-spacing: 0.7rem;
+    ${mediaMobile`
+    font-size: 3.5vh;
+  `}
+  }
   ${mediaMobile`
-    margin: 4vh;
+    margin: 3vh;
     font-size: 5vh;
   `}
 `
