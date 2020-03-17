@@ -23,14 +23,14 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
-        path: `${__dirname}/src/posts`,
+        path: `${__dirname}/posts/blog`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `book`,
-        path: `${__dirname}/src/books`,
+        path: `${__dirname}/posts/book`,
       },
     },
     `gatsby-plugin-sharp`,
