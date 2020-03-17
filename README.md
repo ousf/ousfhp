@@ -11,4 +11,4 @@ React+GatsbyJS製
 ## run on your computer
 1. Clone this repository  
 2. ```$ yarn install```
-3. ```$ yaen develop```
+3. ```$ yarn develop```
