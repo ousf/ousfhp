@@ -1,7 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Helmet from "react-helmet"
 
 //import COLOR from "../const/color"
+import META from "../const/meta"
 
 import Card from "../components/card"
 import BookCard from "../components/books/bookcard"
@@ -14,6 +16,10 @@ const BooksPage = ({ data, location }) => {
   const books = data.allMarkdownRemark.edges
   return (
     <div>
+      <Helmet>
+        <title>会誌紹介 | {META.siteName}</title>
+        <meta property="og:title" content="会誌紹介" />
+      </Helmet>
       <Card
         title="会誌紹介"
         theme="primary"

@@ -5,9 +5,12 @@ import { generateMedia } from "styled-media-query"
 import Helmet from "react-helmet"
 import mediaQuery from "styled-media-query"
 
-import BackTypo from "../components/backtypography"
+import META from "../const/meta"
 
+import BackTypo from "../components/backtypography"
 import Nav from "../components/nav/nav"
+
+import LogoImg from "../../static/logo1.jpg"
 
 const customMedia = generateMedia({
   mobile: "1000px",
@@ -67,9 +70,18 @@ const Layout = props => {
         htmlAttributes={{
           lang: "ja",
         }}
-        title="ousfhp"
-        meta={[{ name: "robots", content: "noindex,nofollow" }]}
-      />
+      >
+        <meta name="robots" content="noindex,nofollow" />
+        <title>{META.siteName}</title>
+        <meta
+          property="og:url"
+          content={"https://ousf-dev.netlify.com" + props.location.pathname}
+        />
+        <meta property="og:type" content="article" />
+        <meta property="og:site_name" content={META.siteName} />
+        <meta property="og:image" content={LogoImg} />
+        <meta name="twitter:card" content="summary" />
+      </Helmet>
       <Nav />
       <AnimatePresence exitBeforeEnter>
         <motion.main

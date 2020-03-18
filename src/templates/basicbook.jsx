@@ -1,7 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
+import Helmet from "react-helmet"
 
+import META from "../const/meta"
 import COLOR from "../const/color"
 
 import Layout from "../components/layout"
@@ -66,6 +68,14 @@ const BasicBookTemplate = ({ data, location }) => {
   const mainImgSrc = frontmatter.bookimg.childImageSharp.fluid.src
   return (
     <div>
+      <Helmet>
+        <title>
+          {frontmatter.title} | {META.siteName}
+        </title>
+        <meta property="og:title" content={frontmatter.title} />
+        <meta property="og:image" content={mainImgSrc} />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
       <Card
         title={frontmatter.title}
         theme="primary"

@@ -1,7 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 import mediaQuery from "styled-media-query"
+import Helmet from "react-helmet"
 
+import META from "../const/meta"
 import COLOR from "../const/color"
 
 import Card from "../components/card"
@@ -50,6 +52,10 @@ const Content = styled.div`
 const ContactPage = () => {
   return (
     <div>
+      <Helmet>
+        <title>アクセス | {META.siteName}</title>
+        <meta property="og:title" content="アクセス" />
+      </Helmet>
       <Card
         title="アクセス"
         theme="primary"

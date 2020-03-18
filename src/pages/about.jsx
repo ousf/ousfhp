@@ -1,7 +1,9 @@
 import React from "react"
 import styled from "styled-components"
+import Helmet from "react-helmet"
 
 import COLOR from "../const/color"
+import META from "../const/meta"
 
 import Card from "../components/card"
 
@@ -36,6 +38,10 @@ const Content = styled.div`
 const AboutPage = ({ location }) => {
   return (
     <div>
+      <Helmet>
+        <title>阪大SF研について | {META.siteName}</title>
+        <meta property="og:title" content="阪大SF研について" />
+      </Helmet>
       <Card
         title="阪大ＳＦ研とは"
         theme="primary"

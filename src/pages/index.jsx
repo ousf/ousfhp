@@ -1,4 +1,5 @@
 import React from "react"
+import Helmet from "react-helmet"
 
 import Notice from "../components/top/notice"
 import About from "../components/top/about"
@@ -15,6 +16,18 @@ const BookItem = withMediaComponent(Kaishi, KaishiMobile)
 const TopPage = ({ data, location }) => {
   return (
     <div>
+      <Helmet>
+        <meta
+          name="description"
+          content="大阪大学SF研究会のオフィシャルWEBサイトです"
+        />
+        <meta property="og:title" content="トップ" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:description"
+          content="大阪大学SF研究会のオフィシャルWEBサイトです"
+        />
+      </Helmet>
       <Welcome />
       <About />
       <Notice />
