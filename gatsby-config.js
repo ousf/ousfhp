@@ -5,6 +5,9 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    siteUrl: "https://ousf-dev.netlify.com"
+  },
   plugins: [
     `gatsby-plugin-styled-components`,
     {
@@ -56,6 +59,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
+        host: "https://ousf-dev.netlify.com",
         policy: [{
           userAgent: '*',
           disallow: '/'
