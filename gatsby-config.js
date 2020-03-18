@@ -52,6 +52,15 @@ module.exports = {
       options: {
         component: require.resolve("./src/components/layout.jsx")
       }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{
+          userAgent: '*',
+          disallow: '/'
+        }]
+      }
     }
   ],
 }

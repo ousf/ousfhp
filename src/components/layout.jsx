@@ -81,6 +81,7 @@ const Layout = props => {
         <meta property="og:site_name" content={META.siteName} />
         <meta property="og:image" content={LogoImg} />
         <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@ousf1" />
       </Helmet>
       <Nav />
       <AnimatePresence exitBeforeEnter>
