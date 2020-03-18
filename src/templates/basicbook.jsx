@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 import Helmet from "react-helmet"
+import mediaQuery from "styled-media-query"
 
 import META from "../const/meta"
 import COLOR from "../const/color"
@@ -10,6 +11,8 @@ import Layout from "../components/layout"
 import Card from "../components/card"
 import Badge from "../components/badge"
 import Button from "../components/button"
+
+const mediaMobile = mediaQuery.lessThan("medium")
 
 const Content = styled.div`
   margin-right: auto;
@@ -38,6 +41,11 @@ const Content = styled.div`
   & p {
     font-size: 0.9rem;
     line-height: 1.5rem;
+    & span {
+      margin: 10px 0;
+      ${mediaMobile`
+      width: 100%;`}
+    }
   }
 `
 
@@ -50,6 +58,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 `
 
 const BookName = styled.span`

@@ -2,7 +2,7 @@
 date: "2019-05-04"
 title: "初めての投稿　ここにタイトルが入力される予定です"
 type: blog
-path: testpost2
+path: "testpost2"
 ---
 
 # 誤植について

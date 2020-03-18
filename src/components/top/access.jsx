@@ -18,7 +18,7 @@ const Content = styled.div`
 const Access = () => {
   return (
     <Card title="アクセス" linkto="/contact">
-      <Content>　 ＳＦ研へのアクセス・お問い合わせはこちらから</Content>
+      <Content>ＳＦ研へのアクセス・お問い合わせはこちらから</Content>
     </Card>
   )
 }

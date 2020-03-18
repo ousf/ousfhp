@@ -1,8 +1,15 @@
 const path = require(`path`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
+const {
+  createFilePath
+} = require(`gatsby-source-filesystem`)
 
-exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
+exports.createPages = async ({
+  graphql,
+  actions
+}) => {
+  const {
+    createPage
+  } = actions
 
   const blogPost = path.resolve("./src/templates/basicpost.jsx")
   const resultBlog = await graphql(`
@@ -88,8 +95,8 @@ exports.createPages = async ({ graphql, actions }) => {
 
   bookposts.forEach((post, index) => {
     const previous =
-      index === blogposts.length - 1 ? null : blogposts[index + 1].node
-    const next = index === 0 ? null : blogposts[index - 1].node
+      index === bookposts.length - 1 ? null : bookposts[index + 1].node
+    const next = index === 0 ? null : bookposts[index - 1].node
 
     createPage({
       path: "/book/" + post.node.frontmatter.path,
@@ -103,8 +110,14 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 }
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
+exports.onCreateNode = ({
+  node,
+  actions,
+  getNode
+}) => {
+  const {
+    createNodeField
+  } = actions
   if (node.internal.type === "MarkdownRemark") {
     const value = createFilePath({
       node,
