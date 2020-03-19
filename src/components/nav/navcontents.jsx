@@ -2,14 +2,11 @@ import React from "react"
 import styled from "styled-components"
 import { motion } from "framer-motion"
 import { Link } from "gatsby"
-import mediaQuery from "styled-media-query"
 
 import COLOR from "../../const/color"
 
 import MenuButton from "./menubutton"
 import Logo from "../ousf_logo"
-
-const mediaMobile = mediaQuery.lessThan("large")
 
 const Wrapper = styled.div`
   z-index: 6;

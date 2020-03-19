@@ -76,9 +76,9 @@ const ContactPage = () => {
             <br />
             なお部員は平日の昼にたむろしてることが多いです
           </p>
-          <img src={Map01} />
+          <img src={Map01} alt="Map01" />
           <p>阪大坂を上がってきて右の建物(広場の横)が学生交流棟</p>
-          <img src={Map02} />
+          <img src={Map02} alt="Map02" />
           <p>
             1階に食堂(工事中)、2階に学生センターがある
             <br />

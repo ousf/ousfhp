@@ -1,5 +1,4 @@
 import React from "react"
-import Media from "react-media"
 import MediaQuery from "react-responsive"
 
 const withMediaComponent = (DesktopComponent, MobileComponent) => {

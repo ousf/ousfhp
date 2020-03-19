@@ -7,7 +7,6 @@ import mediaQuery from "styled-media-query"
 import META from "../const/meta"
 import COLOR from "../const/color"
 
-import Layout from "../components/layout"
 import Card from "../components/card"
 import Badge from "../components/badge"
 import Button from "../components/button"

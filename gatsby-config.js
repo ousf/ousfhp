@@ -65,6 +65,19 @@ module.exports = {
           disallow: '/'
         }]
       }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `大阪大学SF研究会公式サイト`,
+        short_name: `阪大SF研`,
+        description: `大阪大学SF研究会の公式サイトです`,
+        lang: `jp`,
+        icon: `static/logo1.jpg`,
+        start_url: `/`,
+        background_color: `#edeef1`,
+        theme_color: `#21B7F8`
+      }
     }
   ],
 }

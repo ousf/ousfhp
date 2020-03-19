@@ -6,7 +6,6 @@ import Helmet from "react-helmet"
 import META from "../const/meta"
 import COLOR from "../const/color"
 
-import Layout from "../components/layout"
 import Card from "../components/card"
 
 const Date = styled.div`
