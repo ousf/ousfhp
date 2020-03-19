@@ -79,7 +79,7 @@ const Layout = props => {
         />
         <meta property="og:type" content="article" />
         <meta property="og:site_name" content={META.siteName} />
-        <meta property="og:image" content={LogoImg} />
+        <meta property="og:image" content={process.env.SITE_URL + LogoImg} />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@ousf1" />
       </Helmet>
