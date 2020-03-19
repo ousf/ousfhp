@@ -1,9 +1,9 @@
-name: github pages
+name: production build
 
 on:
   push:
     branches:
-      - dev
+      - master
 
 jobs:
   build-deploy:
@@ -30,7 +30,7 @@ jobs:
         run: yarn install
 
       - name: build
-        run: yarn build:stg
+        run: yarn build
 
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3

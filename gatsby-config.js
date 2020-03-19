@@ -4,9 +4,14 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+const activeEnv = process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
+require("dotenv").config({
+  path: `./.env.${activeEnv}`,
+})
+
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://ousf-dev.netlify.com"
+    siteUrl: process.env.SITE_URL,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -14,11 +19,7 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: [
-            "Roboto:100i,100,300,300i,700",
-            "Noto Sans JP:400,500",
-            "Raleway:200i",
-          ],
+          families: ["Roboto:100i,100,300,300i,700", "Noto Sans JP:400,500"],
         },
       },
     },
@@ -53,18 +54,19 @@ module.exports = {
     {
       resolve: `gatsby-plugin-layout`,
       options: {
-        component: require.resolve("./src/components/layout.jsx")
-      }
+        component: require.resolve("./src/components/layout.jsx"),
+      },
     },
     {
-      resolve: 'gatsby-plugin-robots-txt',
+      resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "https://ousf-dev.netlify.com",
+        host: process.env.SITE_URL,
         policy: [{
-          userAgent: '*',
-          disallow: '/'
-        }]
-      }
+          userAgent: "*",
+          disallow: process.env.ROBOTS_POLICY_DISALLOW,
+          allow: process.env.ROBOTS_POLICY_ALLOW
+        }],
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -76,8 +78,8 @@ module.exports = {
         icon: `static/logo1.jpg`,
         start_url: `/`,
         background_color: `#edeef1`,
-        theme_color: `#21B7F8`
-      }
-    }
+        theme_color: `#21B7F8`,
+      },
+    },
   ],
 }
