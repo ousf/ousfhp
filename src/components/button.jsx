@@ -43,7 +43,7 @@ const Content = styled.span`
   font-size: 0.9rem;
   font-family: "Roboto", "Noto Sans JP";
   color: ${props => handleColorTypeText(props.theme, props.textcolor)};
-  font-weight: 300;
+  font-weight: 500;
   white-space: nowrap;
 `
 Content.defaultProps = {

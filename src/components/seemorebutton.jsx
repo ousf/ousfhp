@@ -25,7 +25,7 @@ const Content = styled.span`
   font-size: 0.9rem;
   font-family: "Roboto";
   color: ${COLOR.PRIMARY};
-  font-weight: 300;
+  font-weight: 700;
 `
 
 const SeeMore = () => {

@@ -19,7 +19,7 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ["Roboto:100i,100,300,300i,700", "Noto Sans JP:400,500"],
+          families: ["Roboto:100i,100,300,300i,500", "Noto Sans JP:400,500"],
         },
       },
     },
