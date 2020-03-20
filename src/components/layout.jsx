@@ -71,7 +71,6 @@ const Layout = props => {
           lang: "ja",
         }}
       >
-        <meta name="robots" content="noindex,nofollow" />
         <title>{META.siteName}</title>
         <meta
           property="og:url"
