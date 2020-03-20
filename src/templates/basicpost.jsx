@@ -2,12 +2,14 @@ import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 import Helmet from "react-helmet"
+import mediaQuery from "styled-media-query"
 
 import META from "../const/meta"
 import COLOR from "../const/color"
 
 import Card from "../components/card"
 
+const mediaMobile = mediaQuery.lessThan("medium")
 const Date = styled.div`
   color: ${COLOR.BASE};
   font-family: "Roboto";
@@ -20,6 +22,7 @@ const Content = styled.div`
   padding: 20px;
   color: ${COLOR.BLACK};
   font-family: "Noto Sans JP";
+  width: 100%;
   & h1 {
     font-size: 1.4rem;
     margin: 10px 0 20px 0;
@@ -40,6 +43,11 @@ const Content = styled.div`
   & p {
     font-size: 0.9rem;
     line-height: 1.5rem;
+    & span {
+      margin: 10px 0;
+      ${mediaMobile`
+      width: 100%;`}
+    }
   }
 `
 
