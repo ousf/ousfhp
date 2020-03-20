@@ -81,5 +81,11 @@ module.exports = {
         theme_color: `#21B7F8`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GA_ID
+      }
+    }
   ],
 }
