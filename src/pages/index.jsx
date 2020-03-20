@@ -21,7 +21,7 @@ const TopPage = ({ data, location }) => {
           name="description"
           content="大阪大学SF研究会のオフィシャルWEBサイトです"
         />
-        <meta property="og:title" content="トップ" />
+        <meta property="og:title" content="大阪大学SF研究会" />
         <meta property="og:type" content="website" />
         <meta
           property="og:description"
