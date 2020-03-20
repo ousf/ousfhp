@@ -93,7 +93,7 @@ const BasicBookTemplate = ({ data, location }) => {
           {frontmatter.title} | {META.siteName}
         </title>
         <meta property="og:title" content={frontmatter.title} />
-        <meta property="og:image" content={mainImgSrc} />
+        <meta property="og:image" content={process.env.SITE_URL + mainImgSrc} />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <Card

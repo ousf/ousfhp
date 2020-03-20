@@ -74,7 +74,7 @@ const Layout = props => {
         <title>{META.siteName}</title>
         <meta
           property="og:url"
-          content={"https://ousf-dev.netlify.com" + props.location.pathname}
+          content={process.env.SITE_URL + props.location.pathname}
         />
         <meta property="og:type" content="article" />
         <meta property="og:site_name" content={META.siteName} />
