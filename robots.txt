@@ -1,4 +1,5 @@
 User-agent: *
-Disallow: /
-Sitemap: https://ousf-dev.netlify.com/sitemap.xml
-Host: https://ousf-dev.netlify.com
+Allow: /
+Disallow:
+Sitemap: https://ousf.net/sitemap.xml
+Host: https://ousf.net
