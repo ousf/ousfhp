@@ -70,6 +70,18 @@ const BookName = styled.span`
   line-height: 2.5rem;
 `
 
+const handleBoothButton = boothurl => {
+  if (boothurl === "") {
+    return "none"
+  }
+}
+
+const BoothButton = styled.a`
+  text-decoration: none;
+  margin: 10px 0;
+  display: ${props => handleBoothButton(props.url)};
+`
+
 const BasicBookTemplate = ({ data, location }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
@@ -97,12 +109,9 @@ const BasicBookTemplate = ({ data, location }) => {
             <Badge>{frontmatter.badge}</Badge>
           </div>
           <BookName>{frontmatter.title}</BookName>
-          <a
-            css="text-decoration: none;margin: 10px 0;"
-            href={frontmatter.booth}
-          >
+          <BoothButton url={frontmatter.booth} href={frontmatter.booth}>
             <Button textcolor={COLOR.BOOTH}>BOOTHで購入</Button>
-          </a>
+          </BoothButton>
           <Content dangerouslySetInnerHTML={{ __html: html }}></Content>
         </Container>
       </Card>
