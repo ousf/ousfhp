@@ -30,7 +30,7 @@ const Date = styled.span`
   margin-right: auto;
 `
 
-const Wrapper = styled(motion.custom(Link))`
+const Wrapper = styled(motion(Link))`
   text-decoration: none;
   display: block;
 `

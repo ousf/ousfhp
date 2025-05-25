@@ -83,7 +83,7 @@ const Layout = props => {
         <meta name="twitter:site" content="@ousf1" />
       </Helmet>
       <Nav />
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence mode="wait">
         <motion.main
           key={props.location.pathname}
           variants={variants}

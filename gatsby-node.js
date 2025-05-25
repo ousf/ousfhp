@@ -90,6 +90,8 @@ exports.createPages = async ({
         previous,
         next,
       },
+      
+    mode: "SSG",
     })
   })
 
@@ -106,6 +108,8 @@ exports.createPages = async ({
         previous,
         next,
       },
+      
+    mode: "SSG",
     })
   })
 }

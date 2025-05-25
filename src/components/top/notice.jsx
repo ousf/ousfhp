@@ -6,7 +6,7 @@ import styled from "styled-components"
 import Item from "./noticeitem"
 import Card from "../card"
 
-const Wrapper = styled(motion.custom(Link))`
+const Wrapper = styled(motion(Link))`
   width: 80%;
   text-decoration: none;
   display: block;

@@ -50,13 +50,13 @@ module.exports = {
         }, ],
       },
     },
-    `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-layout`,
-      options: {
-        component: require.resolve("./src/components/layout.jsx"),
-      },
-    },
+    // `gatsby-plugin-react-helmet`,
+    // {
+    //   resolve: `gatsby-plugin-layout`,
+    //   options: {
+    //     component: require.resolve("./src/components/layout.jsx"),
+    //   },
+    // },
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
@@ -81,11 +81,11 @@ module.exports = {
         theme_color: `#21B7F8`,
       },
     },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: process.env.GA_ID
-      }
-    }
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     trackingId: process.env.GA_ID
+    //   }
+    // }
   ],
 }
