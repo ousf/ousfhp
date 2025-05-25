@@ -16,6 +16,7 @@ jobs:
         with:
           node-version: 18
           cache: "pnpm"
+          package-manager: "pnpm"
 
       - name: Setup pnpm
         run: npm install -g pnpm
