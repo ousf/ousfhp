@@ -9,17 +9,19 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v4 # バージョンをv4に更新
 
-      - name: Setup Node.js with pnpm
-        uses: actions/setup-node@v4
+      - name: Setup Node.js and pnpm
+        uses: actions/setup-node@v4 # バージョンをv4に更新
         with:
           node-version: 18
-          cache: "pnpm"
-          package-manager: "pnpm"
+          cache: "pnpm" # pnpmのキャッシュを有効化。これによりpnpmのセットアップとストアキャッシュが自動化されます
+          # 必要であれば、特定のpnpmバージョンを指定できます (例: pnpm-version: 8)
+          # 指定しない場合、package.jsonのpackageManagerフィールドを参照するか、最新のLTS版が使われます。
 
-      - name: Verify pnpm version
-        run: pnpm -v
+      # 'Setup pnpm'ステップは actions/setup-node@v4 がpnpmを自動セットアップするため不要になりました。
+      # 'Cache pnpm store'ステップは actions/setup-node@v4 の cache: "pnpm" でカバーされるため不要になりました。
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -27,9 +29,9 @@ jobs:
       - name: Build
         run: pnpm build
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3 # 現状v3が最新の安定版です
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           publish_dir: ./public
-          publish_branch: production
+          publish_branch: production # デプロイ先のブランチ名
