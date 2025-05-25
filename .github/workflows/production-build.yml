@@ -16,18 +16,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: "pnpm"
-          # pnpmのバージョンを明示的に指定します。
-          # プロジェクトで使用しているバージョン（例: '8', '8.6.0' など）を指定してください。
-          # 不明な場合は 'latest' でも試せます。
-          # package.json に "packageManager": "pnpm@x.y.z" のような指定があれば、それに合わせるのが理想です。
-          pnpm-version: "latest" # または具体的なバージョン (例: '8' や '8.15.5')
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: npm install
 
       - name: Build
-        run: pnpm build
+        run: npm build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
