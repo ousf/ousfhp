@@ -7,10 +7,10 @@ path: "ningen"
 bookimg: "./ousf_vol28.png"
 badge: "2024冬"
 booth: "https://ousf.booth.pm/items/6425706"
-description: "阪大ＳＦ研第２８号のテーマは『人間』。
-ヒトであり人である人間を"biology"と"sociology"の二面から考えて特集！
-表紙の一部を切り取り、扉絵が見える装丁になっています。
-"
+description: | 
+  阪大ＳＦ研第２８号のテーマは『人間』。
+  ヒトであり人である人間を"biology"と"sociology"の二面から考えて特集！
+  表紙の一部を切り取り、扉絵が見える装丁になっています。
 ---
 
 阪大ＳＦ研第２８号のテーマは『人間』  
